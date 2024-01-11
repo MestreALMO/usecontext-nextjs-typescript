@@ -1,8 +1,8 @@
 import { ReactNode, createContext, useContext, useState } from "react";
 
 interface ctxCountContextProps {
-  count: number;
-  setCount: React.Dispatch<React.SetStateAction<number>>;
+  ctxCount: number;
+  setCtxCount: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const CtxCountContext = createContext<ctxCountContextProps>(
@@ -14,10 +14,10 @@ export default function CtxCountProvider({
 }: {
   children: ReactNode;
 }) {
-  const [count, setCount] = useState(0);
+  const [ctxCount, setCtxCount] = useState(0);
 
   return (
-    <CtxCountContext.Provider value={{ count, setCount }}>
+    <CtxCountContext.Provider value={{ ctxCount, setCtxCount }}>
       {children}
     </CtxCountContext.Provider>
   );
@@ -25,6 +25,6 @@ export default function CtxCountProvider({
 
 export const useCtxCount = () => {
   const context = useContext(CtxCountContext);
-  const { count, setCount } = context;
-  return { count, setCount };
+  const { ctxCount, setCtxCount } = context;
+  return { ctxCount, setCtxCount };
 };

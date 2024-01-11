@@ -1,14 +1,14 @@
 import { useCtxCount } from "../../context/ctxCount";
 
 export const Counter = () => {
-  const { count, setCount } = useCtxCount();
+  const { ctxCount, setCtxCount } = useCtxCount();
 
   return (
     <>
-      <h2>Counter: {count}</h2>
+      <h2>Counter: {ctxCount}</h2>
       <button
         onClick={() => {
-          setCount(count + 1);
+          setCtxCount(ctxCount + 1);
         }}
       >
         Count + 1

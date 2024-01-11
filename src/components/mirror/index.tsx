@@ -1,11 +1,11 @@
 import { useCtxCount } from "../../context/ctxCount";
 
 export const Mirror = () => {
-  const { count } = useCtxCount();
+  const { ctxCount } = useCtxCount();
 
   return (
     <>
-      <h2>Mirror: {count}</h2>
+      <h2>Mirror: {ctxCount}</h2>
     </>
   );
 };
