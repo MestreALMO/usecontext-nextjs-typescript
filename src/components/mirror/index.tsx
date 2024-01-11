@@ -1,7 +1,7 @@
-import { useCount } from "../../context/Count";
+import { useCtxCount } from "../../context/ctxCount";
 
 export const Mirror = () => {
-  const { count } = useCount();
+  const { count } = useCtxCount();
 
   return (
     <>

@@ -1,7 +1,7 @@
-import { useCount } from "../../context/Count";
+import { useCtxCount } from "../../context/ctxCount";
 
 export const Counter = () => {
-  const { count, setCount } = useCount();
+  const { count, setCount } = useCtxCount();
 
   return (
     <>

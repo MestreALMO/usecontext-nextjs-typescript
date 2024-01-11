@@ -3,7 +3,7 @@ import styles from "@/styles/Home.module.css";
 import { Counter } from "@/components/counter";
 import { Mirror } from "@/components/mirror";
 
-import CountProvider from "@/context/Count";
+import CtxCountProvider from "@/context/ctxCount";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <main className={`${styles.main}`}>
         <h1>useContext</h1>
 
-        <CountProvider>
+        <CtxCountProvider>
           <h1>YouTube DevALMO, useContext</h1>
 
           <Counter />
@@ -25,7 +25,7 @@ export default function Home() {
           <hr />
 
           <Mirror />
-        </CountProvider>
+        </CtxCountProvider>
       </main>
     </>
   );
