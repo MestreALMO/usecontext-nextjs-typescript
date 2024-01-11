@@ -1,8 +1,15 @@
-import { ReactNode, createContext, useContext, useState } from "react";
+import {
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+  createContext,
+  useContext,
+  useState,
+} from "react";
 
 interface ctxCountContextProps {
   ctxCount: number;
-  setCtxCount: React.Dispatch<React.SetStateAction<number>>;
+  setCtxCount: Dispatch<SetStateAction<number>>;
 }
 
 const CtxCountContext = createContext<ctxCountContextProps>(
