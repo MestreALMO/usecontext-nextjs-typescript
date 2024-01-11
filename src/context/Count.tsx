@@ -1,8 +1,8 @@
 import { ReactNode, createContext, useContext, useState } from "react";
 
 interface CountContextProps {
-  count: number | undefined;
-  setCount: React.Dispatch<React.SetStateAction<number>> | undefined;
+  count: number;
+  setCount: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const CountContext = createContext<CountContextProps>({} as CountContextProps);
